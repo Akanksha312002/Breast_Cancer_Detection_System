@@ -1,3 +1,10 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+EMAIL_USER = os.getenv("EMAIL_USER")
+EMAIL_PASS = os.getenv("EMAIL_PASS")
 import numpy as np
 import tensorflow as tf
 from flask import Blueprint, request, jsonify, send_file
@@ -347,10 +354,7 @@ def email_report(report_id):
 
     # Send Email (Use Gmail App Password)
     try:
-        yag = yagmail.SMTP(
-            user="ghorpadeakanksha31@gmail.com",
-            password="xwli mwxt snbu dqgz"
-        )
+        yag = yagmail.SMTP(user=EMAIL_USER, password=EMAIL_PASS)
 
         yag.send(
             to=recipient_email,
