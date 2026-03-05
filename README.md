@@ -151,6 +151,25 @@ Breast_Cancer_Detection_System
 ```
 
 ---
+## Installation
+
+Clone the repository
+
+git clone https://github.com/Akanksha312002/Breast_Cancer_Detection_System.git
+
+Backend setup
+
+cd Backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+Frontend setup
+
+cd ../frontend
+npm install
+npm run dev
+
 
 ## How to Run the Project
 
