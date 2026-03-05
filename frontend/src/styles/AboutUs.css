@@ -1,0 +1,88 @@
+.about-page {
+    width: 100%;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* HERO SECTION */
+.about-hero {
+    min-height: calc(100vh - 110px);
+    /* fallback */
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    align-items: center;
+}
+
+/* Overlay Content */
+.about-overlay {
+    margin-left: 80px;
+    max-width: 650px;
+}
+
+/* Title */
+.about-title {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 42px;
+    color: #1f2d5a;
+    margin-bottom: 20px;
+}
+
+.about-subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #e75480;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+/* Combined Card */
+.about-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 35px 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    width: 980px;
+    margin-top: 80px;
+    margin-left: 0px;
+    height:250px;
+    box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.08);
+
+}
+
+/* Each section */
+.about-item {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+}
+
+/* Icons */
+.about-icon {
+    font-size: 30px;
+    color: #e75480;
+}
+
+/* Divider */
+.about-divider {
+    width: 1px;
+    height: 165px;
+    background: rgb(11, 10, 10);
+}
+
+/* Text */
+.about-item h3 {
+    font-size: 22px;
+    color: #1f2d5a;
+    margin-bottom: 5px;
+}
+
+.about-item p {
+    font-size: 16px;
+    color: rgb(19, 19, 19);
+    line-height: 1.4;
+}

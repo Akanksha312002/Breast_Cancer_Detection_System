@@ -1,0 +1,468 @@
+.mpPage {
+    min-height: 100vh;
+  
+    /* ✅ Pink theme + bokeh + your background image */
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255, 227, 239, 0.95) 0%, rgba(255, 255, 255, 0) 45%),
+      radial-gradient(circle at 80% 30%, rgba(255, 209, 228, 0.9) 0%, rgba(255, 255, 255, 0) 48%),
+      radial-gradient(circle at 40% 80%, rgba(255, 234, 243, 0.95) 0%, rgba(255, 255, 255, 0) 55%),
+      var(--bg-image),
+      linear-gradient(180deg, #ffe9f2 0%, #fff7fb 45%, #ffffff 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    padding: 26px 16px 40px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  
+  .mpContainer {
+    max-width: 1200px;
+    margin-left: 140px;
+    margin-right: 80px;
+  }
+  
+  .mpTitle {
+    font-size: 44px;
+    font-weight: 800;
+    margin: 10px 0 35px;
+    color: #1f2d5a;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  
+  .mpGrid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 28px;
+  }
+  
+  .mpCard {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 192, 214, 0.55);
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(6px);
+  }
+  
+  .mpInfoCard {
+    padding: 16px 18px;
+  }
+  
+  .mpError {
+    border-color: rgba(220, 38, 38, 0.35);
+    background: rgba(255, 235, 235, 0.7);
+  }
+  
+  .mpMuted {
+    color: #6b6b6b;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* LEFT */
+  .mpLeft {
+    padding: 22px 20px 20px;
+    text-align: center;
+  }
+  
+  .mpAvatarWrap {
+    width: 160px;
+    height: 160px;
+    margin: 4px auto 16px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffe1ee, #ffffff);
+    padding: 6px;
+  }
+  
+  .mpAvatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  
+  .mpName {
+    font-size: 28px;
+    margin: 10px 0 6px;
+    color: #333;
+  }
+  
+  .mpEmail {
+    margin: 0;
+    color: #6b6b6b;
+    font-weight: 700;
+  }
+  
+  .mpSmallInfo {
+    margin-top: 14px;
+    padding: 14px 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  
+  .mpRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 0;
+  }
+  
+  .mpLabel {
+    color: #6b6b6b;
+    font-weight: 800;
+  }
+  
+  .mpValue {
+    color: #2f2f2f;
+    font-weight: 800;
+    overflow-wrap: anywhere; /* ✅ breaks long values if needed */
+
+  }
+  
+  .mpBtnRow {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  
+  .mpBtnPrimary {
+    border: none;
+    background: linear-gradient(90deg, #ff6f9f 0%, #ff4e86 100%);
+    color: #fff;
+    font-weight: 900;
+    padding: 12px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    min-width: 140px;
+  }
+  
+  .mpBtnSecondary {
+    border: 1px solid rgba(255, 111, 159, 0.6);
+    background: #fff;
+    color: #d9487e;
+    font-weight: 900;
+    padding: 12px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    min-width: 160px;
+  }
+  
+  /* RIGHT */
+  .mpRight {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0; /* ✅ important for grid overflow issues */
+
+  }
+  
+  .mpSection {
+    overflow: hidden;
+    min-width: 0; /* ✅ prevents half-card/overflow */
+
+  }
+  
+  .mpSectionHeader {
+    background: linear-gradient(90deg, #ff98bd 0%, #ff7aa9 50%, #ff98bd 100%);
+    color: #fff;
+    font-weight: 900;
+    padding: 14px 18px;
+    font-size: 18px;
+  }
+  
+  /* STATS */
+  .mpStats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 18px;
+  }
+  
+  .mpStatBox {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 192, 214, 0.55);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+  }
+  
+  .mpIcon {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+  
+  .mpStatTitle {
+    font-weight: 900;
+    color: #2f2f2f;
+    margin-bottom: 10px;
+  }
+  
+  .mpPill {
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-weight: 900;
+  }
+  
+  .mpPill.warn {
+    background: #ffe3ea;
+    color: #b21f3b;
+  }
+  
+  .mpPill.neutral {
+    background: #eef2ff;
+    color: #2b3a6e;
+  }
+  
+  /* BOTTOM ROW */
+  .mpBottomRow {
+    display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 22px;
+  align-items: stretch; /* ✅ makes both cards equal height */
+}
+  
+  
+  .mpPad {
+    padding: 16px 18px;
+  }
+  
+  .mpDetailGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  
+  .mpDetailItem {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 192, 214, 0.45);
+    border-radius: 12px;
+    padding: 12px;
+    min-width: 0;
+
+  }
+  
+  /* SETTINGS */
+  .mpSettingRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+  }
+  
+  .mpSettingRow:last-child {
+    border-bottom: none;
+  }
+  
+  .mpSettingIcon {
+    font-size: 18px;
+  }
+  
+  .mpSettingText {
+    font-weight: 900;
+    color: #333;
+    flex: 1;
+  }
+  
+  .mpChev {
+    font-size: 22px;
+    color: #d9487e;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 980px) {
+    .mpGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .mpStats {
+      grid-template-columns: 1fr;
+    }
+  
+    .mpBottomRow {
+      grid-template-columns: 1fr;
+    }
+  
+    .mpDetailGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ✅ Fix half/overflow issue in grids */
+.mpRight,
+.mpSection,
+.mpDetailItem {
+  min-width: 0;
+}
+
+.mpBottomRow {
+  align-items: stretch;
+}
+
+/* ✅ Long values should not break layout */
+.mpValue {
+  overflow-wrap: anywhere;
+}
+
+.mpActionRow{
+  display:flex;
+  gap:12px;
+  margin-top:14px;
+  flex-wrap:wrap;
+}
+
+.mpPrecautions{
+  margin-top:14px;
+  background:#fff6f9;
+  border:1px solid #ffd0dc;
+  border-radius:14px;
+  padding:12px 14px;
+}
+
+.mpPrecautionsTitle{
+  margin:0 0 8px 0;
+  color:#1f2a44;
+  font-weight:800;
+}
+
+.mpPrecautionsList{
+  margin:0;
+  padding-left:18px;
+}
+
+.mpPrecautionsList li{
+  margin:6px 0;
+}
+
+/* Delete account button */
+.mpBtnDanger{
+  margin-top: 14px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  background: #ffebee;
+  color: #c62828;
+  transition: 0.25s ease;
+}
+
+.mpBtnDanger:hover{
+  background: #c62828;
+  color: white;
+}
+
+/* Modal */
+.mpModalOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.mpModal{
+  width: 420px;
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* If you want settings NOT clickable, use cursor default */
+.mpSettingRow{
+  cursor: default; /* change to pointer ONLY if you add onClick */
+}
+
+/* ================= POPUP MODAL ================= */
+.mpModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.mpModal {
+  width: 420px;
+  max-width: 95%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(236, 64, 122, 0.25);
+  overflow: hidden;
+  animation: mpPop 0.22s ease;
+}
+
+@keyframes mpPop {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.mpModalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: linear-gradient(to right, #f48fb1, #ec407a);
+  color: white;
+}
+
+.mpModalHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mpModalClose {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mpModalText {
+  padding: 16px;
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mpModalActions {
+  padding: 0 16px 16px 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.mpModalBtn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(to right, #f48fb1, #ec407a);
+}
+
+.mpModalBtn:hover {
+  opacity: 0.9;
+}
+
+/* Make settings look clickable */
+.mpSettingRow {
+  cursor: pointer;
+}

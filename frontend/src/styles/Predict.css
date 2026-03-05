@@ -1,0 +1,178 @@
+/* PAGE BACKGROUND */
+.predict-wrapper {
+    min-height: 100vh;
+    background: url("../assets/predict_background5.png") no-repeat center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    padding: 70px 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* OUTER GLASS CARD */
+.outer-card {
+    width: 780px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 20px 30px 35px rgba(0, 0, 0, 0.396);
+    margin-left: 350px;
+}
+
+/* TOP TITLE SECTION */
+.title-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-card h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    color: #1f2d5a;
+    margin-bottom: 12px;
+}
+
+.title-card p {
+    font-family: 'Poppins', sans-serif;
+    color: #e75480;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* INNER FORM CARD */
+.form-card {
+    position: relative;
+    background-color: #f9eef3;
+    border-radius: 16px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* background shield layer */
+.form-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--shield);
+    background-repeat: no-repeat;
+
+    /* ✅ This is what makes it look like your reference image */
+    background-size: 720px;
+    background-position:left;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Keep content above background */
+.form-grid,
+.predict-btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* GRID LAYOUT */
+.form-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    row-gap: 14px;
+    column-gap: 15px;
+    align-items: center;
+}
+
+.form-grid label {
+    font-weight: 500;
+    color: #000000;
+}
+
+/* INPUTS */
+.form-grid input,
+.form-grid select {
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: 1px solid #ad9aa5;
+    background: white;
+}
+
+/* FILE TEXT */
+.file-types {
+    display: block;
+    font-size: 12px;
+    color: #252123;
+    margin-top: 6px;
+}
+
+/* Make only some fields smaller (like your reference image) */
+.predict-small-input {
+    width: 230px !important;
+    /* small age box */
+    justify-self: start;
+    /* keep it left in grid cell */
+}
+
+.predict-small-select {
+    width: 140px !important;
+    /* small dropdowns */
+    justify-self: start;
+    padding-right: 28px;
+    /* space for arrow */
+}
+
+/* DIVIDER */
+.divider {
+    grid-column: span 2;
+    border: none;
+    height: 1px;
+    background: #ead3dd;
+    margin: 12px 0;
+}
+
+.divider-bottom {
+    border: none;
+    height: 1px;
+    background: #ead3dd;
+    margin: 18px 0;
+  
+    position: relative;
+    z-index: 2;   /* keeps it above background shield */
+  }
+
+/* BUTTON */
+.predict-btn {
+    margin: 18px auto 0;   /* center horizontally */
+    width: 260px;          /* short button */
+    display: block;
+  
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+  
+    background: linear-gradient(to right, #ff7fa2, #ff5f8d);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  
+    position: relative;
+    z-index: 2;
+  }
+
+/* FOOTER */
+.footer-text {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #131012;
+    text-align: center;
+    /* THIS fixes alignment */
+}
+.predict-error {
+    margin-top: 12px;
+    color: #d32f2f;
+    font-size: 13px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+  }

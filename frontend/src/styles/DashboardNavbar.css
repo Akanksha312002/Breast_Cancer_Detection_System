@@ -1,0 +1,88 @@
+.dash-navbar {
+    height: 60px;
+    background: linear-gradient(to right, #ebadba, #e08d9f);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* LEFT */
+  
+  
+  .ribbon {
+    font-size: 20px;
+  }
+  
+  .dash-brand {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+  }
+  
+  /* CENTER LINKS */
+  .dash-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+  
+  .dash-nav-links li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px ;
+    padding-bottom: 4px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  
+  }
+  
+  .dash-nav-links li a.active {
+    color: #080707;
+    border-bottom: 2px solid #d6336c;
+  }
+  
+  
+  
+  .dash-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .dash-logo img {
+    width: 70px;
+    height: 40px;
+  }
+  
+ /* LOGOUT BUTTON STYLE */
+.dash-nav-logout-btn {
+  background-color: #ffffff;
+  color: #d6336c;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  border: none;                 /* remove default button border */
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.dash-nav-logout-btn:hover {
+  background-color: #d6336c;
+  color: white;
+}
+
+/* Remove focus outline */
+.dash-nav-logout-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+  
+  
+  

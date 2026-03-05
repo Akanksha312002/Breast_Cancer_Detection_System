@@ -1,0 +1,147 @@
+.dashboard {
+  font-family: "Segoe UI", sans-serif;
+  background: url("../assets/background.png") no-repeat center center;
+  background-size: cover;
+
+  min-height: 100vh;
+}
+
+/* ================= HERO ================= */
+/* ================= HERO ================= */
+
+.dashboard-hero {
+ 
+  padding: 30px 10px;
+  
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Doctor Image */
+.hero-image img {
+  width: 250px;
+}
+
+/* Text Section */
+.hero-content {
+  max-width: 900px;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1f2d5a;
+  margin-bottom: 17px;
+  line-height: 1.2;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #e75480;
+}
+
+/* ================= MAIN ================= */
+.dashboard-main {
+  padding: 20px 80px;
+}
+
+/* CARDS */
+.dashboard-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.dashboard-card {
+  background: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 18px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+}
+
+.dashboard-card img {
+  width: 140px;
+  margin: 15px 0;
+}
+
+.dashboard-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.dashboard-card p {
+  font-size: 15px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+/* BUTTONS */
+
+
+.secondary-btn {
+  background: linear-gradient(135deg, #f06292, #e75480);
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.secondary-btn:hover {
+  opacity: 0.7;
+}
+
+/* AWARENESS STRIP */
+.awareness-strip {
+  background: linear-gradient(to right, #ee919f, #ff85a2);
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 40px auto;
+  font-weight: 600;
+}
+
+.motivation-card {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  margin-bottom: 35px;
+}
+
+.motivation-card h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.motivation-card p {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}

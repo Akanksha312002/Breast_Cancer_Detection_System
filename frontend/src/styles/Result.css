@@ -1,0 +1,217 @@
+.result-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  
+    background-image: url("../assets/result_background1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* OUTER PINK CARD */
+  .result-outer-card {
+    width: 970px;
+    max-width: 95%;
+    padding: 30px;
+    margin-left: 450px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  
+    background: rgba(255, 192, 203, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+  }
+  
+  /* INNER WHITE CARD */
+  .result-inner-card {
+    border-radius: 15px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 5px solid rgba(21, 21, 21, 0.18);
+  }
+  
+  /* Heading */
+  .result-heading {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1f2d5a;
+  }
+  
+  .result-heading span {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #d94f86;
+  }
+  
+  /* Prediction Type */
+  .prediction-type {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .badge {
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+  
+  .badge-safe {
+    background: #28a745;
+  }
+  .badge-danger {
+    background: #e74c3c;
+  }
+  
+  /* Divider */
+  hr {
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+    background: rgba(217, 79, 134, 0.2);
+  }
+  
+  /* GRID - Shift chart left by reducing gap */
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1.2fr; /* chart closer */
+    gap: 8px; /* much smaller gap */
+    align-items: start;
+    margin-right: 60px;
+  }
+  
+  /* LEFT DETAILS */
+  .result-details p {
+    margin: 18px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #d94f86;
+    border-radius: 50%;
+  }
+  
+  /* CHART */
+  .result-chart {
+    width: 100%;
+    margin-top: 6px;
+  }
+  
+  .chart-title {
+    margin: 0 0 10px;
+    font-weight: 800;
+    color: #1f2d5a;
+    text-align: left;
+  }
+  
+  .chart-box {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(217, 79, 134, 0.2);
+    border-radius: 12px;
+    padding: 6px; /* tighter */
+  }
+  
+  /* Precautions */
+  .precautions-section h3 {
+    color: #d94f86;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .precautions-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .precautions-section li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .tick {
+    color: #d94f86;
+    font-weight: bold;
+  }
+  
+  /* Buttons */
+  .result-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .download-btn {
+    background-color: #d94f86;
+    color: white;
+  
+    padding: 10px 18px;
+    border-radius: 8px;
+  
+    font-weight: bold;
+  
+    /* ✅ button reset */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  
+    /* ✅ remove weird browser styling */
+    appearance: none;
+    -webkit-appearance: none;
+  
+    /* ✅ same as link */
+    text-decoration: none;
+  
+    transition: 0.25s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #c33c74;
+  }
+  
+  .download-btn:active {
+    transform: translateY(1px);
+  }
+  
+  .download-btn:focus-visible {
+    box-shadow: 0 0 0 4px rgba(217, 79, 134, 0.25);
+  }
+  
+  .back-btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 2px solid #d94f86;
+    background: transparent;
+    color: #d94f86;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .back-btn:hover {
+    background: rgba(217, 79, 134, 0.1);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 900px) {
+    .result-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }

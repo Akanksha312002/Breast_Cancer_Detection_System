@@ -1,0 +1,251 @@
+
+/* ---------- FAB Glow Animation ---------- */
+@keyframes softGlow {
+    0% {
+      box-shadow: 0 10px 22px rgba(236, 64, 122, 0.25),
+        0 0 0 rgba(236, 64, 122, 0.0);
+      transform: translateY(0);
+    }
+    50% {
+      box-shadow: 0 12px 26px rgba(236, 64, 122, 0.32),
+        0 0 18px rgba(236, 64, 122, 0.22);
+      transform: translateY(-1px);
+    }
+    100% {
+      box-shadow: 0 10px 22px rgba(236, 64, 122, 0.25),
+        0 0 0 rgba(236, 64, 122, 0.0);
+      transform: translateY(0);
+    }
+  }
+  .faqFab {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 58px;
+    height: 58px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+  
+    background: linear-gradient(135deg, #f48fb1, #ec407a);
+    color: #fff;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    animation: softGlow 2.2s ease-in-out infinite;
+  }
+  
+  /* stop glow and make it more interactive on hover */
+.faqFab:hover {
+    animation-play-state: paused;
+    box-shadow: 0 14px 30px rgba(236, 64, 122, 0.35),
+      0 0 22px rgba(236, 64, 122, 0.28);
+    transform: translateY(-2px);
+  }
+  
+  /* ---------- Tooltip ---------- */
+  .faqTooltip {
+    position: absolute;
+    right: 70px; /* tooltip appears left of button */
+    top: 50%;
+    transform: translateY(-50%);
+  
+    background: rgba(255, 255, 255, 0.95);
+    color: #d6336c;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 10px;
+  
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(214, 51, 108, 0.22);
+  
+    white-space: nowrap;
+  
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease;
+  }
+  
+  /* small arrow */
+  .faqTooltip::after {
+    content: "";
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    border-right: 1px solid rgba(214, 51, 108, 0.22);
+    border-top: 1px solid rgba(214, 51, 108, 0.22);
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  /* show tooltip on hover */
+  .faqFab:hover .faqTooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-2px);
+  }
+  
+  .faqFab:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+  }
+  
+  .faqPanel {
+    position: fixed;
+    right: 22px;
+    bottom: 92px;
+    width: 360px;
+    max-width: calc(100vw - 44px);
+    height: 520px;
+    max-height: calc(100vh - 130px);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(233, 30, 99, 0.18);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .faqHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: linear-gradient(to right, rgba(244, 143, 177, 0.9), rgba(236, 64, 122, 0.9));
+    color: #fff;
+  }
+  
+  .faqTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+  }
+  
+  .faqDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0.9;
+  }
+  
+  .faqClose {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .faqDisclaimer {
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #7a3351;
+    background: rgba(255, 235, 243, 0.85);
+    border-bottom: 1px solid rgba(233, 30, 99, 0.12);
+  }
+  
+  .faqBody {
+    padding: 12px 12px;
+    overflow: auto;
+    flex: 1;
+  }
+  
+  .faqMsg {
+    display: flex;
+    margin: 8px 0;
+  }
+  
+  .faqMsg.user {
+    justify-content: flex-end;
+  }
+  
+  .faqMsg.bot {
+    justify-content: flex-start;
+  }
+  
+  .faqBubble {
+    max-width: 85%;
+    padding: 10px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  
+  .faqMsg.user .faqBubble {
+    background: linear-gradient(135deg, #f06292, #e75480);
+    color: #fff;
+    border-bottom-right-radius: 6px;
+  }
+  
+  .faqMsg.bot .faqBubble {
+    background: rgba(244, 143, 177, 0.18);
+    color: #2b2b2b;
+    border-bottom-left-radius: 6px;
+  }
+  
+  .faqChips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 10px 12px;
+    border-top: 1px solid rgba(233, 30, 99, 0.12);
+    background: rgba(255, 255, 255, 0.75);
+  }
+  
+  .faqChip {
+    border: 1px solid rgba(233, 30, 99, 0.25);
+    background: rgba(255, 235, 243, 0.7);
+    color: #9c1e52;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .faqChip:hover {
+    background: rgba(244, 143, 177, 0.3);
+  }
+  
+  .faqInputRow {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    border-top: 1px solid rgba(233, 30, 99, 0.12);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .faqInput {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+    outline: none;
+  }
+  
+  .faqSend {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #f06292, #e75480);
+  }
+
+  .faqFab i {
+    font-size: 22px;
+  }
+  

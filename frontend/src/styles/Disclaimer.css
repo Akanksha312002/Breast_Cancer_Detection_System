@@ -1,0 +1,77 @@
+
+.disclaimer-page {
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* FULL SCREEN HERO */
+.disclaimer-hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: left center; /* doctor on LEFT */
+  display: flex;
+  align-items: center;
+}
+
+/* Right side content */
+.disclaimer-overlay {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: 190px;
+  max-width: 700px;
+}
+
+.disclaimer-overlay h1 {
+  font-size: 42px;
+  color: #1f2d5a;
+  margin-bottom: 10px;
+}
+
+.disclaimer-overlay p {
+  color: rgb(8, 8, 8);
+  margin-bottom: 25px;
+}
+
+/* Card */
+.disclaimer-card {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  width:840px ;
+  margin-bottom: 20px;
+}
+
+.disclaimer-item {
+  margin-bottom: 16px;
+}
+
+.disclaimer-item h3 {
+  color: #e75480;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.disclaimer-item p {
+  font-size: 14px;
+  color: rgb(12, 11, 11);
+  line-height: 1.6;
+}
+
+.disclaimer-footer {
+  margin-top: 15px;
+  font-size: 15px;
+  color: rgb(15, 13, 13);
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .disclaimer-overlay {
+    margin: 40px 20px;
+  }
+
+  .disclaimer-overlay h1 {
+    font-size: 32px;
+  }
+}

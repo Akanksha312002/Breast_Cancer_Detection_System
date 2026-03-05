@@ -1,0 +1,193 @@
+/* ================= PAGE ================= */
+.contact-page {
+    width: 100%;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* ===================================================== */
+  /* ================= HERO SECTION ======================= */
+  /* ===================================================== */
+  
+  .contact-hero-section {
+    height: 100vh; /* FULL SCREEN */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-hero-overlay {
+    margin-left: 140px;
+    margin-bottom: 100px;
+    max-width: 600px;
+  }
+  
+  .contact-hero-title {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 42px;
+    color: #1f2d5a;
+    margin-bottom: 20px;
+  }
+  
+  .contact-hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #e75480;
+    margin-bottom: 60px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* Cards */
+
+  /* ===== Single Contact Info Bar ===== */
+.contact-info-bar {
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 18px 28px;
+    border-radius: 14px;
+    box-shadow: 20px 20px 22px rgba(19, 19, 19, 0.08);
+    width: 600px;
+    height:100px;
+  }
+  
+  /* Each item */
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .contact-info-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #1f2d5a;
+  }
+  
+  .contact-info-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Icon */
+  .contact-icon {
+    font-size: 20px;
+    color:rgb(225, 28, 136)
+  }
+  
+  /* Divider line */
+  .contact-divider {
+    width: 1px;
+    height: 50px;
+    background: rgb(11, 10, 10);
+  }
+  
+  
+  
+  /* ===================================================== */
+  /* ================= FORM SECTION ======================= */
+  /* ===================================================== */
+  
+
+.contact-form-section {
+    height: 100vh; /* FULL SCREEN */
+    background-size: cover;
+    background-position: left center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 80px;
+    position: relative; /* ADD THIS */
+
+  }
+  
+  /* ===== Small Message Banner ===== */
+/* ===== Floating Message Card ===== */
+.contact-message-banner {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+  
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    max-width: 600px;
+    padding: 16px 14px;
+  
+    background: rgba(255, 255, 255, 0.92); /* white card */
+    backdrop-filter: blur(6px); /* soft glass effect */
+    border-radius: 10px;
+  
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+  
+    font-size: 16px;
+    color: rgb(16, 15, 15);
+  }
+  
+  /* Ribbon icon */
+  .contact-ribbon {
+    font-size: 30px;
+    color: #e75480;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+  }
+  
+
+  
+  .contact-form-wrapper {
+    background: rgba(255,255,255,0.96);
+    padding: 35px;
+    border-radius: 14px;
+    width: 500px;
+    height: 450px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    margin-right:50px;
+  }
+  
+  .contact-form-title {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2d5a;
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  /* Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .contact-form textarea {
+    height: 80px;
+  }
+  
+  .contact-form button {
+    background: #e75480;
+    color: white;
+    border: none;
+    padding: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  
+  .contact-form button:hover {
+    background: #d6336c;
+  }
+  
