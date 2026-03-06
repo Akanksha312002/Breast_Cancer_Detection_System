@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify, send_from_directory
-from config import users_collection, otp_collection
+from config import users_collection, reports_collection, otp_collection, contact_messages_collection
 from utils.password_utils import hash_password, check_password
-from config import users_collection, reports_collection, otp_collection
+
 import secrets
 import datetime
 import os
@@ -314,3 +314,30 @@ def reset_password():
     )
 
     return jsonify({"message": "Password reset successful"})
+
+# =====================================
+# CONTACT US
+# =====================================
+@auth.route("/contact", methods=["POST"])
+def contact_us():
+    data = request.json or {}
+
+    name = (data.get("name") or "").strip()
+    email = (data.get("email") or "").strip().lower()
+    subject = (data.get("subject") or "").strip()
+    message = (data.get("message") or "").strip()
+
+    if not name or not email or not subject or not message:
+        return jsonify({"error": "All fields are required"}), 400
+
+    contact_messages_collection.insert_one({
+        "name": name,
+        "email": email,
+        "subject": subject,
+        "message": message,
+        "createdAt": datetime.datetime.utcnow()
+    })
+
+    return jsonify({
+        "message": "Thank you for contacting us. We will get back to you soon."
+    }), 200

@@ -139,14 +139,14 @@
 
   
   .contact-form-wrapper {
-    background: rgba(255,255,255,0.96);
-    padding: 35px;
-    border-radius: 14px;
-    width: 500px;
-    height: 450px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    margin-right:50px;
-  }
+  background: rgba(255,255,255,0.96);
+  padding: 35px;
+  border-radius: 14px;
+  width: 500px;
+  min-height: 450px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  margin-right: 50px;
+}
   
   .contact-form-title {
     font-family: 'Poppins', sans-serif;
@@ -191,3 +191,16 @@
     background: #d6336c;
   }
   
+.contact-success-message {
+  margin-top: 14px;
+  color: green;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contact-error-message {
+  margin-top: 14px;
+  color: red;
+  font-size: 15px;
+  font-weight: 500;
+}
